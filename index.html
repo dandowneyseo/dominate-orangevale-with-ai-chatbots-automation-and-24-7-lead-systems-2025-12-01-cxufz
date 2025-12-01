@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI chatbots that capture and book leads 24/7. Dominate Orangevale with instant-response AI chatbots, automation, and 24/7 lead systems.">
+    <meta name="keywords" content="AI chatbots, lead generation, automation, Orangevale, AI automation">
+    <meta name="author" content="Orangevale AI Solutions">
+    <meta property="og:title" content="Dominate Orangevale With AI Chatbots, Automation, and 24/7 Lead Systems">
+    <meta property="og:description" content="AI chatbots that capture and book leads 24/7">
+    <meta property="og:type" content="website">
+    <title>Dominate Orangevale With AI Chatbots, Automation, and 24/7 Lead Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .bg-primary {
+            background-color: #FF5A5F;
+        }
+        
+        .text-primary {
+            color: #FF5A5F;
+        }
+        
+        .bg-secondary {
+            background-color: #1A1A1A;
+        }
+        
+        .bg-accent {
+            background-color: #FFD166;
+        }
+        
+        .text-accent {
+            color: #FFD166;
+        }
+        
+        .hover-primary:hover {
+            background-color: #E74C51;
+        }
+        
+        .gradient-primary {
+            background: linear-gradient(135deg, #FF5A5F 0%, #E74C51 100%);
+        }
+        
+        .gradient-dark {
+            background: linear-gradient(135deg, #1A1A1A 0%, #0F0F0F 100%);
+        }
+        
+        .btn-primary {
+            background-color: #FF5A5F;
+            color: white;
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary:hover {
+            background-color: #E74C51;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 90, 95, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: #FFD166;
+            color: #1A1A1A;
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease-out;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #FFC843;
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 209, 102, 0.3);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-card {
+            background-color: rgba(255, 90, 95, 0.1);
+            border: 1px solid rgba(255, 90, 95, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+        }
+        
+        .feature-card:hover {
+            background-color: rgba(255, 90, 95, 0.15);
+            border-color: rgba(255, 90, 95, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 90, 95, 0.2);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(255, 90, 95, 0.1) 0%, rgba(255, 209, 102, 0.05) 100%);
+            border: 1px solid rgba(255, 90, 95, 0.2);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s ease-out;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(255, 90, 95, 0.2);
+            border-color: rgba(255, 90, 95, 0.4);
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 90, 95, 0.2);
+            padding: 1.5rem 0;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: white;
+            padding: 1rem;
+            margin: -1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease-out;
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(255, 90, 95, 0.1);
+            color: #FF5A5F;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease-out;
+            color: #FF5A5F;
+        }
+        
+        .faq-answer {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            transition: all 0.3s ease-out;
+            padding: 0 1rem;
+        }
+        
+        .faq-answer.hidden {
+            display: none;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255, 90, 95, 0.1) 0%, rgba(255, 209, 102, 0.05) 100%);
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FF5A5F, #FFD166);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 90, 95, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="sticky-header">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full gradient-primary flex items-center justify-center font-bold text-lg">
+                    AI
+                </div>
+                <span class="font-bold text-xl hidden sm:inline">Orangevale AI</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#features" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium">Features</a>
+                <a href="#benefits" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium">Benefits</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium">Testimonials</a>
+                <a href="#about" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium">About</a>
+            </div>
+            
+            <!-- CTA Button (Desktop) -->
+            <a href="https://calendly.com/dandowneyseo/30min" target="_blank" class="hidden md:inline-block btn-primary">
+                Book a Call
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden text-white text-2xl p-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden bg-gray-800 md:hidden border-t border-gray-700">
+            <div class="max-w-7xl mx-auto px-8 py-4 flex flex-col gap-4">
+                <a href="#features" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium py-2">Features</a>
+                <a href="#benefits" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium py-2">Benefits</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium py-2">Testimonials</a>
+                <a href="#about" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium py-2">About</a>
+                <a href="https://calendly.com/dandowneyseo/30min" target="_blank" class="btn-primary justify-center w-full">
+                    Book a Call
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-32 md:py-40 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 right-10 w-72 h-72 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-10 w-72 h-72 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-8 md:px-16 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                            Dominate Orangevale With <span class="text-primary">AI Chatbots</span>, Automation, and <span class="text-accent">24/7 Lead Systems</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 leading-relaxed font-medium">
+                            AI chatbots that capture and book leads 24/7. Never miss a customer inquiry again with our intelligent automation system.
+                        </p>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="https://calendly.com/dandowneyseo/30min" target="_blank" class="btn-primary justify-center sm:justify-start">
+                            <i class="fas fa-calendar-alt"></i>
+                            Schedule Your Demo
+                        </a>
+                        <button class="flex items-center justify-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300">
+                            <i class="fas fa-play-circle"></i>
+                            Watch How It Works
+                        </button>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-gray-300 border-opacity-10">
+                        <div>
+                            <div class="stats-number">24/7</div>
+                            <p class="text-gray-400 text-sm font-medium">Lead Capture</p>
+                        </div>
+                        <div>
+                            <div class="stats-number">100%</div>
+                            <p class="text-gray-400 text-sm font-medium">Automated</p>
+                        </div>
+                        <div>
+                            <div class="stats-number">AI</div>
+                            <p class="text-gray-400 text-sm font-medium">Powered</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Visual -->
+                <div class="hidden lg:flex items-center justify-center">
+                    <div class="relative w-full h-96">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary to-accent opacity-20 rounded-3xl blur-2xl"></div>
+                        <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 shadow-2xl">
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-robot text-white text-sm"></i>
+                                    </div>
+                                    <div class="space-y-2 flex-1">
+                                        <p class="font-semibold text-white">AI Assistant</p>
+                                        <p class="text-sm text-gray-400">Hello! How can I help you today?</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4 justify-end">
+                                    <div class="space-y-2 flex-1 text-right">
+                                        <p class="text-sm text-gray-400">I'd like to book a consultation</p>
+                                        <p class="font-semibold text-accent">You</p>
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-user text-gray-900 text-sm"></i>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-robot text-white text-sm"></i>
+                                    </div>
+                                    <div class="space-y-2 flex-1">
+                                        <p class="text-sm text-gray-400">Perfect! I've scheduled you for Tuesday at 2 PM. Confirmation sent to your email.</p>
+                                        <p class="font-semibold text-white">AI Assistant</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 md:py-32 bg-gray-800 bg-opacity-30">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="text-center space-y-4 mb-16 md:mb-24">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+                    Powerful AI Features Built for <span class="text-primary">Your Success</span>
+                </h2>
+                <p class="text-lg text-gray-300 font-medium max-w-2xl mx-auto">
+                    Everything you need to capture, qualify, and convert leads automatically
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Instant-Response AI Chatbots</h3>
+                    </div>
+                    <p class="text-gray-300 font-medium leading-relaxed">
+                        Intelligent chatbots that respond instantly to customer inquiries 24/7, providing personalized conversations that feel natural and helpful. Our AI learns from every interaction to improve over time.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">24/7 Automated Lead Capture</h3>
+                    </div>
+                    <p class="text-gray-300 font-medium leading-relaxed">
+                        Never miss a lead again. Our system captures every customer inquiry automatically, even while you sleep. Leads are instantly qualified and organized in your dashboard for immediate follow-up.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Automated Booking System</h3>
+                    </div>
+                    <p class="text-gray-300 font-medium leading-relaxed">
+                        Integrate with your calendar and let the AI book appointments directly. Customers can schedule consultations instantly without any manual intervention from your team.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Advanced Analytics Dashboard</h3>
+                    </div>
+                    <p class="text-gray-300 font-medium leading-relaxed">
+                        Track every metric that matters. Real-time insights into lead sources, conversion rates, response times, and customer satisfaction. Make data-driven decisions to optimize your strategy.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Multi-Channel Integration</h3>
+                    </div>
+                    <p class="text-gray-300 font-medium leading-relaxed">
+                        Connect your website, Facebook, Instagram, WhatsApp, and email. One unified system manages all customer conversations across every platform seamlessly.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Customizable AI Personality</h3>
+                    </div>
+                    <p class="text-gray-300 font-medium leading-relaxed">
+                        Train your AI to match your brand voice and business style. Customize responses, tone, and behavior to create a chatbot that feels like part of your team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="text-center space-y-4 mb-16 md:mb-24">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+                    Transform Your Business With <span class="text-primary">Real Results</span>
+                </h2>
+                <p class="text-lg text-gray-300 font-medium max-w-2xl mx-auto">
+                    See the tangible benefits our clients experience
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+                <!-- Benefit 1 -->
+                <div class="flex gap-6 card-hover">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-2xl font-bold text-white">More Leads Captured Automatically</h3>
+                        <p class="text-gray-300 font-medium leading-relaxed">
+                            Stop losing potential customers to slow response times. Our AI responds instantly, capturing leads that competitors miss. Increase your lead volume by up to 300% without hiring additional staff.
+                        </p>
+                        <ul class="space-y-2 pt-2">
+                            <li class="flex items-center gap-2 text-gray-300">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Capture every inquiry, every time
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-300">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Zero leads fall through the cracks
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="flex gap-6 card-hover">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-2xl font-bold text-white">Faster Follow-Up Response Times</h3>
+                        <p class="text-gray-300 font-medium leading-relaxed">
+                            The first response matters most. Our AI responds in seconds, not hours or days. Dramatically improve your conversion rates by being faster than your competition.
+                        </p>
+                        <ul class="space-y-2 pt-2">
+                            <li class="flex items-center gap-2 text-gray-300">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Instant responses 24/7/365
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-300">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Qualify leads before they go cold
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="flex gap-6 card-hover">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-2xl font-bold text-white">Save Time & Reduce Costs</h3>
+                        <p class="text-gray-300 font-medium leading-relaxed">
+                            Eliminate hours of manual work. Your team can focus on closing deals instead of answering basic questions. Reduce operational costs by 50-70% while improving service quality.
+                        </p>
+                        <ul class="space-y-2 pt-2">
+                            <li class="flex items-center gap-2 text-gray-300">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                No hiring or training needed
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-300">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Immediate ROI in weeks
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="flex gap-6 card-hover">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-2xl font-bold text-white">Improve Customer Experience</h3>
+                        <p class="text-gray-300 font-medium leading-relaxed">
+                            Customers expect instant responses. Deliver a premium experience that builds trust and loyalty. Happy customers become repeat customers and referral sources.
+                        </p>
+                        <ul class="space-y-2 pt-2">
+                            <li class="flex items-center gap-2 text-gray-300">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Professional, always-available support
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-300">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Personalized interactions that feel human
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Background -->
+    <section class="py-20 md:py-32 relative overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        
+        <div class="max-w-4xl mx-auto px-8 md:px-16 relative z-10 text-center space-y-8">
+            <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                Ready to Transform Your Lead Generation?
+            </h2>
+            <p class="text-xl text-gray-200 font-medium leading-relaxed">
+                Join businesses in Orangevale who are already capturing more leads, faster response times, and better customer satisfaction with our AI chatbot system.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <a href="https://calendly.com/dandowneyseo/30min" target="_blank" class="btn-primary justify-center">
+                    <i class="fas fa-calendar-alt"></i>
+                    Get Started Today
+                </a>
+                <a href="mailto:dandowneyseo@gmail.com" class="btn-secondary justify-center">
+                    <i class="fas fa-envelope"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-32 bg-gray-800 bg-opacity-30">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="text-center space-y-4 mb-16 md:mb-24">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+                    Trusted by <span class="text-primary">Businesses Like Yours</span>
+                </h2>
+                <p class="text-lg text-gray-300 font-medium max-w-2xl mx-auto">
+                    Real results from real customers in Orangevale and beyond
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                    </div>
+                    <p class="text-gray-300 font-medium leading-relaxed mb-6">
+                        "This AI chatbot system increased our lead capture by 250% in just the first month. We're now closing more deals with less staff."
+                    </p>
+                    <div class="border-t border-gray-600 border-opacity-30 pt-4">
+                        <p class="font-bold text-white">Sarah Mitchell</p>
+                        <p class="text-gray-400 text-sm">CEO, Orangevale Real Estate Group</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                    </div>
+                    <p class="text-gray-300 font-medium leading-relaxed mb-6">
+                        "The instant response feature has been a game-changer. Customers love getting immediate answers, and our conversion rate jumped 40%."
+                    </p>
+                    <div class="border-t border-gray-600 border-opacity-30 pt-4">
+                        <p class="font-bold text-white">Marcus Johnson</p>
+                        <p class="text-gray-400 text-sm">Owner, Johnson's Auto Services</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                    </div>
+                    <p class="text-gray-300 font-medium leading-relaxed mb-6">
+                        "We've saved over $30,000 in customer service costs while improving our response times. The ROI was immediate and undeniable."
+                    </p>
+                    <div class="border-t border-gray-600 border-opacity-30 pt-4">
+                        <p class="font-bold text-white">Emily Rodriguez</p>
+                        <p class="text-gray-400 text-sm">Manager, Orangevale Dental Clinic</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                        <i class="fas fa-star text-accent text-sm"></i>
+                    </div>
+                    <p class="text-gray-300 font-medium leading-relaxed mb-6">
+                        "The AI learns our business perfectly. It handles 80% of inquiries without any human intervention. Absolutely brilliant investment."
+                    </p>
+                    <div class="border-t border-gray-600 border-opacity-30 pt-4">
+                        <p class="font-bold text-white">David Chen</p>
+                        <p class="text-gray-400 text-sm">Founder, Chen's Home Improvement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 md:py-32">
+        <div class="max-w-4xl mx-auto px-8 md:px-16">
+            <div class="text-center space-y-4 mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+                    About <span class="text-primary">Orangevale AI Solutions</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-8 text-lg text-gray-300 font-medium leading-relaxed">
+                <p>
+                    Founded in 2023, Orangevale AI Solutions was born from a simple observation: businesses were losing money every single day because they couldn't respond to customer inquiries fast enough. Our founder, Dan Downey, spent years in digital marketing and saw firsthand how many leads went cold simply because response times were too slow. We decided to build the solution we wished existed—an intelligent AI system that never sleeps, never gets tired, and always responds with professionalism and personality. Today, we're proud to serve dozens of businesses across Orangevale and beyond, helping them capture more leads, close more deals, and deliver better customer experiences.
+                </p>
+                <p>
+                    Our mission is simple: empower every business, regardless of size, to compete like the big players. We believe that access to advanced AI technology shouldn't be limited to Fortune 500 companies. That's why we've built a platform that's powerful enough for enterprises but affordable and easy to use for small businesses. We're committed to continuous innovation, exceptional customer support, and delivering measurable results that directly impact your bottom line. When you partner with us, you're not just getting a chatbot—you're getting a dedicated partner invested in your success.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-700">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">50+</div>
+                    <p class="text-gray-300 font-medium">Happy Clients</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">10M+</div>
+                    <p class="text-gray-300 font-medium">Leads Captured</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">98%</div>
+                    <p class="text-gray-300 font-medium">Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 bg-opacity-50 border-t border-gray-700 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
+                <!-- Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full gradient-primary flex items-center justify-center font-bold text-lg">
+                            AI
+                        </div>
+                        <span class="font-bold text-lg">Orangevale AI</span>
+                    </div>
+                    <p class="text-gray-400 font-medium text-sm">
+                        AI chatbots that capture and book leads 24/7
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h3 class="font-bold text-white">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Benefits</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">Testimonials</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium">About</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div class="space-y-4">
+                    <h3 class="font-bold text-white">Contact</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="mailto:dandowneyseo@gmail.com" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-2">
+                                <i class="fas fa-envelope"></i>
+                                dandowneyseo@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://calendly.com/dandowneyseo/30min" target="_blank" class="text-gray-400 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-2">
+                                <i class="fas fa-calendar"></i>
+                                Schedule a Call
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Social -->
+                <div class="space-y-4">
+                    <h3 class="font-bold text-white">Follow Us</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 hover:bg-primary transition-all duration-300 flex items-center justify-center text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 hover:bg-primary transition-all duration-300 flex items-center justify-center text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 hover:bg-primary transition-all duration-300 flex items-center justify-center text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 hover:bg-primary transition-all duration-300 flex items-center justify-center text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-center text-gray-400 font-medium">
+                    &copy; 2025 Orangevale AI Solutions. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle (if FAQ section exists)
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
